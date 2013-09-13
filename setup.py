@@ -13,9 +13,6 @@ setup(
     license='MIT',
     packages=['pork'],
     install_requires=['docopt>=0.6,<1.0']
-    tests_require=[
-        'pytest'
-    ],
     entry_points={
         'console_scripts': ['pork = pork.cli:main']
     },

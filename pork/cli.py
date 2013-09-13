@@ -16,14 +16,6 @@ Options:
 """
 
 from docopt import docopt
-import sys
-import os
-
-# For testing pork locally by running `python pork/cli.py`, add the project to
-# sys.path so Python can find the pork module.
-if __name__ == '__main__':
-    package_path = os.path.abspath(os.path.join(__file__, '..', '..'))
-    sys.path.insert(0, package_path)
 
 import pork
 from pork.data import Data

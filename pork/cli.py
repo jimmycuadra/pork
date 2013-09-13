@@ -42,12 +42,16 @@ class CLI:
         elif key and value:
             self.data.set(key, value)
         elif key:
-            print self.data.get(key)
+            v = self.data.get(key)
+            if v is not None:
+                print v
         elif self.data.is_empty():
             print __doc__.strip()
         else:
-            for k, v in self.data.list():
-                print "%s: %s" % k, v
+            items = self.data.list()
+            padding = len(max(items, key=len))
+            for k, v in self.data.list().iteritems():
+                print "%s: %s" % (k.rjust(padding), v)
 
 def main():
     CLI().start()

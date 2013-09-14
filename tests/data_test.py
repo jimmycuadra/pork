@@ -5,6 +5,7 @@ from StringIO import StringIO
 
 patch.TEST_PREFIX = 'it'
 
+@patch.object(Data, '_data_path', '/tmp/doesnt_exist')
 class TestData:
     def it_loads_json_data_from_file(self):
         with patch("__builtin__.open", mock_open(read_data='{"foo":"bar"}'),

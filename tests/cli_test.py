@@ -5,6 +5,7 @@ from StringIO import StringIO
 
 patch.TEST_PREFIX = 'it'
 
+
 @patch('pork.cli.Data')
 class TestCLI:
     def it_has_a_data_attribute(self, Data):
@@ -35,10 +36,11 @@ class TestCLI:
     @patch('sys.stdout', new_callable=StringIO)
     def it_lists_all_keys_when_there_is_data(self, stdout, Data):
         Data.return_value.is_empty.return_value = False
-        Data.return_value.list.return_value = { 'foo': 'bar', 'asdf': 'fdsa'}
+        Data.return_value.list.return_value = {'foo': 'bar', 'asdf': 'fdsa'}
         cli = CLI()
         cli.start([])
         assert ' foo: bar\nasdf: fdsa\n' == stdout.getvalue()
+
 
 @patch('pork.cli.CLI')
 class TestMain:

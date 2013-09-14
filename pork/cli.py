@@ -20,6 +20,7 @@ from docopt import docopt
 import pork
 from pork.data import Data
 
+
 class CLI:
     def __init__(self):
         self.data = Data()
@@ -44,6 +45,7 @@ class CLI:
             padding = len(max(items, key=len))
             for k, v in self.data.list().iteritems():
                 print "%s: %s" % (k.rjust(padding), v)
+
 
 def main():
     CLI().start()

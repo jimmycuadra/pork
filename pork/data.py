@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class Data:
     _data_path = os.path.join(os.environ['HOME'], '.pork')
 

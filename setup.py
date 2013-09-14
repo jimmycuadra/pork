@@ -12,7 +12,7 @@ setup(
     url='https://github.com/jimmycuadra/pork',
     license='MIT',
     packages=['pork'],
-    install_requires=['docopt>=0.6,<1.0']
+    install_requires=['docopt>=0.6,<1.0'],
     entry_points={
         'console_scripts': ['pork = pork.cli:main']
     },

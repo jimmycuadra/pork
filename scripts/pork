@@ -1,3 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
 
-PYTHONPATH="$PWD" python "$PWD/pork/cli.py" $@
+import os
+import sys
+
+sys.path.insert(0, os.environ['PWD'])
+
+from pork import cli
+
+cli.main()

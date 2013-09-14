@@ -1,6 +1,12 @@
 # Pork
 
+[![Build Status](https://travis-ci.org/jimmycuadra/pork.png?branch=master)](https://travis-ci.org/jimmycuadra/pork)
+
 **Pork** is a command line tool for quick storage and retrieval of text snippets. It is a port of [Bang](https://github.com/jimmycuadra/bang) to Python.
+
+## Python versions
+
+Pork has been tested only under Python 2.7.
 
 ## Installation
 

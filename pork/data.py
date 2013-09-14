@@ -34,4 +34,4 @@ class Data:
             with open(self._data_path, 'w') as f:
                 json.dump(self._data, f)
         except ValueError:
-            print self._data
+            pass
